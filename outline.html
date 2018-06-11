@@ -1,0 +1,297 @@
+<!DOCTYPE html><head><meta charset="utf-8"><title>COS 598B - Outline</title><link href="main.css" rel="stylesheet"></head><body><nav class="navbar has-shadow is-spaced"><div class="container"><div class="navbar-brand"><a class="navbar-item" href="/"><p class="is-size-3">COS 598B</p></a><a class="navbar-item" href="/"><p class="is-size-5">Home</p></a><a class="navbar-item is-active" href="/outline.html"><p class="is-size-5">Outline</p></a><a class="navbar-item" href="/projects.html"><p class="is-size-5">Projects</p></a></div></div></nav><section class="section"><div class="container"><table class="table is-fullwidth"><thead><th>Date</th><th>Topic/papers</th><th>Presenter (and link to slides)</th></thead><tbody><tr><th class="nowrap">Mon, Feb 5</th><td class="content"><p>Intro, and look at recognition datasets</p>
+<ul>
+<li><a href="http://people.csail.mit.edu/torralba/research/bias/">Unbiased Look at Dataset Bias</a>
+by Torralba&amp;Efros ICCV&#39;13</li>
+</ul>
+</td><td class="content"><p>Olga Russakovsky
+(<a href="http://www.cs.princeton.edu/courses/archive/
+spr18/cos598B/slides/cos598b_5feb18_logistics.pdf">logistics slides</a>,
+<a href="http://www.cs.princeton.edu/courses/archive/
+spr18/cos598B/slides/cos598b_5feb18_dataset_bias.pdf">lecture slides</a>)</p>
+</td></tr><tr><td class="content has-text-centered title is-4" colspan="3"><p><strong>Module 1: Image segmentation, both strongly and weakly supervised</strong></p>
+</td></tr><tr><th class="nowrap">Wed, Feb 7</th><td class="content"><p>Large-scale object segmentation</p>
+<ul>
+<li>Overview of <a href="http://host.robots.ox.ac.uk/pascal/VOC/">PASCAL VOC</a>
+for semantic segmentation and of <a href="http://image-net.org">ImageNet</a></li>
+<li><a href="http://groups.inf.ed.ac.uk/calvin/Publications/kuettelECCV12.pdf">Segmentation Propagation in ImageNet
+</a>
+by Kuettel, Guillaumin, Ferrari ECCV&#39;12 (best paper award) -- c.f., also their
+<a href="http://groups.inf.ed.ac.uk/calvin/proj-imagenet/page/index.html">project page</a>
+We&#39;ll use this paper to both recall some classic segmentation algorithms and also segmentation datasets</li>
+</ul>
+</td><td class="content"><p>Olga Russakovsky
+(<a href="http://www.cs.princeton.edu/courses/archive/
+spr18/cos598B/slides/cos598b_7feb18_imagenet.pdf">ImageNet slides</a>,
+<a href="http://www.cs.princeton.edu/courses/archive/
+spr18/cos598B/slides/cos598b_7feb18_segmprop.pdf">segmentation propagation slides</a>,
+<a href="http://www.cs.princeton.edu/courses/archive/
+spr18/cos598B/slides/cos598b_7feb18_graphcut.pdf">graphcut slides</a>)</p>
+</td></tr><tr><th class="nowrap">Mon, Feb 12</th><td class="content"><p>Semantic segmentation</p>
+<ul>
+<li><a href="https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf">Fully Convolutional Networks for Semantic Segmentation by Long, Shelhamer and Darrell CVPR&#39;15
+</a></li>
+<li>The simple weakly supervised variant
+<a href="http://people.eecs.berkeley.edu/~pathak/papers/iclr15.pdf">Fully Convolutional Multi-Class Multiple Instance Learning by Pathak et al. ICLR workshop&#39;15
+</a></li>
+<li>(time permitting)
+<a href="https://arxiv.org/pdf/1412.7062.pdf">Semantic image segmentation with deep convolutional nets and fully connected CRFs
+</a> by Chen et al. ICLR&#39;15 </li>
+</ul>
+</td><td class="content"><p>Rohan Doshi
+(<a href="/public/outline/Semantic%20segmentation.pdf">slides</a>)</p>
+</td></tr></tbody><tr><th class="nowrap">Wed, Feb 14</th><td class="content"><p>Variations on segmentation supervision:</p>
+<ul>
+<li><a href="https://arxiv.org/pdf/1503.01640.pdf">BoxSup: Exploiting Bounding Boxes to Supervise Convolutional Networks for Semantic Segmentation by Dai, He, Sun ICCV&#39;15
+</a></li>
+<li><a href="https://arxiv.org/pdf/1506.02106.pdf">What&#39;s the Point: Semantic Segmentation with Point Supervision by Bearman et al. ECCV&#39;16
+</a></li>
+</ul>
+</td><td class="content"><p>Yannis Karakozis
+(<a href="/public/outline/Segmentation%20Supervision.pdf">slides</a>)
+(<a href="/public/outline/Feb14_Lecture_MathNotes.pdf">some useful math notes</a>)</p>
+</td></tr><tr><th class="nowrap">Mon, Feb 19</th><td class="content"><p>Instance segmentation:</p>
+<ul>
+<li>Review of <a href="https://arxiv.org/abs/1703.06870">Mask RCNN</a> (background reading)</li>
+<li>Review of <a href="http://cocodataset.org/#home">COCO dataset</a></li>
+<li><a href="https://arxiv.org/pdf/1711.10370.pdf">Learning to segment everything by Hu et al. Nov 2017</a></li>
+</ul>
+</td><td class="content"><p>Berthy Feng + Riley Simmons-Edler
+(<a href="/public/outline/Instance%20Segmentation.pdf">slides</a>)</p>
+</td></tr><tr><th class="nowrap">Wed, Feb 21</th><td class="content"><p>Combining semantic and instance segmentation</p>
+<ul>
+<li><a href="https://arxiv.org/abs/1801.00868">Panotropic Segmentation by Kirillov et al. Jan 2018</a></li>
+<li>Overview of <a href="https://www.cityscapes-dataset.com/">Cityscapes</a>
+and <a href="http://groups.csail.mit.edu/vision/datasets/ADE20K/">ADE20K</a></li>
+</ul>
+</td><td class="content"><p>Stephanie Liu + Andrew Zhou
+(<a href="/public/outline/Amodal%20and%20Panoptic%20Segmentation.pdf">slides</a>)</p>
+</td></tr><tr><th class="nowrap">Mon, Feb 26</th><td class="content"><p>Intro to RNNs and cool annotation framework</p>
+<ul>
+<li><a href="http://www.cs.toronto.edu/polyrnn/polyrnn_paper.pdf">Annotating Object Instances with a Polygon-RNN by Castrejon et al.
+</a> CVPR&#39;17</li>
+<li>Background on Convolutional LSTMs<ul>
+<li><a href="https://arxiv.org/abs/1506.04214">Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting by Shi et al
+</a></li>
+</ul>
+</li>
+</ul>
+</td><td class="content"><p>William Hinthorn
+(<a href="/public/outline/Polygon-RNN.pdf">slides</a>)</p>
+<p><a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">For those wishing to brush up on LSTMs</a></p>
+</td></tr><tr><td class="content" colspan="3"><p>Other cool papers we may not have a chance to cover</p>
+<ul>
+<li><a href="http://liangchiehchen.com/projects/DeepLab.html">DeepLab</a>
+ICLR&#39;15 initially but expanded to include v2.0, a weakly supervised version, etc.</li>
+<li><a href="https://arxiv.org/pdf/1604.05144.pdf">ScribbleSup: Scribble-Supervised Convolutional Networks for Semantic Segmentation by Lin et al. CVPR&#39;16
+</a></li>
+<li><a href="https://arxiv.org/pdf/1611.05424.pdf">Associative Embedding: End-to-End Learning for Joint Detection and Grouping
+</a> NIPS&#39;17</li>
+<li><a href="http://www.cs.toronto.edu/~urtasun/publications/liu_etal_iccv17.pdf">SGN: Sequential Grouping Networks for Instance Segmentation
+</a> ICCV&#39;17</li>
+<li><a href="https://arxiv.org/pdf/1703.02719.pdf">Large Kernel Matters —— Improve Semantic Segmentation by Global Convolutional Network
+</a> March 2017 </li>
+<li><a href="http://blog.qure.ai/notes/semantic-segmentation-deep-learning-review">Qure.ai blog post: a 2017 guide to semantic segmentation with learning
+</a></li>
+<li><a href="https://arxiv.org/abs/1708.01642">Cut, Paste and Learn: Surprisingly Easy Synthesis for Instance Detection
+</a> ICCV&#39;17;
+<a href="https://arxiv.org/pdf/1803.06414.pdf">Learning to Segment via Cut and Paste</a></li>
+</ul>
+</td></tr><tr><td class="content has-text-centered title is-4" colspan="3"><p>Module 2: Language + vision, including captioning, VQA, ...</p>
+</td></tr><tr><th class="nowrap">Wed, Feb 28</th><td class="content"><p>Open-world annotation and recognition</p>
+<ul>
+<li><a href="http://visualgenome.org/paper">Visual Genome: Connecting Language and Vision Using
+Crowdsourced Dense Image Annotations</a></li>
+<li><a href="https://cs.stanford.edu/people/jcjohns/papers/cvpr2015/JohnsonCVPR2015.pdf">Image Retrieval Using Scene Graphs
+</a></li>
+<li>(Optional) <a href="https://web.stanford.edu/~yukez/papers/cvpr2017xu.pdf">Scene Graph Generation by Iterative Message Passing
+</a></li>
+</ul>
+</td><td class="content"><p>Bharath Srivatsan
+(<a href="/public/outline/Open%20World%20Annotation%20with%20Scene%20Graphs.pdf">slides</a>)</p>
+</td></tr><tr><th class="nowrap">Mon, March 5</th><td class="content"><p>From recognition to captioning</p>
+<ul>
+<li><a href="http://www.panderson.me/spice/">SPICE score for evaluating captioning
+</a></li>
+<li><a href="https://arxiv.org/abs/1505.04467">Exploring nearest neighbor approaches for image captioning
+</a></li>
+<li>Background:<ul>
+<li><a href="https://arxiv.org/pdf/1505.01809.pdf">Language Models for Image Captioning:
+The Quirks and What Works</a></li>
+</ul>
+</li>
+</ul>
+</td><td class="content"><p>Vikash + Qasim Nadeem
+(<a href="/public/outline/Towards%20image%20captioning.pdf">slides</a>)</p>
+</td></tr><tr><th class="nowrap">Wed, March 7</th><td class="content"><p>Captioning methods</p>
+<ul>
+<li><a href="https://cs.stanford.edu/people/karpathy/deepimagesent/">Deep Visual-Semantic Alignment for Generating Image Descriptions
+</a> by Karpathy and Fei-Fei</li>
+<li><a href="https://arxiv.org/abs/1511.07571">DenseCap: Fully Convolutional Localization Networks for Dense Captioning
+</a></li>
+</ul>
+</td><td class="content"><p>Ryan McCaffrey + Alex Yue
+(<a href="/public/outline/Dense%20Captioning%20-%20Public.pdf">slides</a>)</p>
+</td></tr><tr><td class="nowrap">Mon, March 12</td><td class="content"><p>No class -- midterms, No class -- midterms, ECCV deadline, CS PhD visit day</p>
+</td><td></td></tr><tr><td class="nowrap">Wed, March 14</td><td class="content"><p>No class -- midterms, No class -- midterms, ECCV deadline, CS PhD visit day</p>
+</td><td></td></tr><tr><th class="nowrap">Spring Break</th><td></td><td></td></tr><tr><th class="nowrap">Mon, March 26</th><td class="content"><p>Visual question answering</p>
+<ul>
+<li>DAQUAR: original VQA task
+<a href="http://www.cs.toronto.edu/~mren/imageqa/results/">Towards a Visual Turing Challenge</a></li>
+<li><a href="https://arxiv.org/pdf/1505.00468v6.pdf">VQA: Visual Question Answering</a><ul>
+<li>c.f., the <a href="http://www.visualqa.org/index.html">VQA challenge page</a></li>
+</ul>
+</li>
+<li><a href="https://arxiv.org/pdf/1612.00837.pdf">Making the V in VQA matter: Elevating the Role of Image Understanding in Visual Question Answering
+</a></li>
+</ul>
+</td><td class="content"><p>Prem Nair + Shayan Hassantabar
+(<a href="/public/outline/Visual%20Question%20and%20Answering.pdf">slides</a>)
+(<a href="/public/outline/COS%20598B%20VQA%20Notes.pdf">some paper notes</a>)</p>
+</td></tr><tr><th class="nowrap">Wed, March 28</th><td class="content"><p>VQA method: simple baselines</p>
+<ul>
+<li><a href="https://arxiv.org/abs/1512.02167">Simple Baseline for Visual Question Answering
+</a></li>
+<li><a href="http://sidgan.me/whats_in_a_question/">What&#39;s in a question: using visual questions as a form of supervision
+</a></li>
+</ul>
+</td><td class="content"><p>Allen Wu
+(<a href="/public/outline/VQA_method.pdf">slides</a>)</p>
+</td></tr><tr><td class="content" colspan="3"><p>Tue, March 27th 12:30-1:30pm: Prof. Jia Deng (U of Michigan) colloquium on Visual Reasoning</p>
+<p>Thu, March 29th 12:30-1:30pm: Justin Johnson (Stanford) colloquium on Language + Vision</p>
+</td></tr><tr><th class="nowrap">Mon, April 2</th><td class="content"><p>Attention-based VQA methods</p>
+<ul>
+<li><a href="https://arxiv.org/pdf/1511.07394.pdf">Where to look: focus regions for Visual Question Answering
+</a> by Shih, Singh, Hoiem</li>
+<li><a href="https://arxiv.org/abs/1511.05234">Ask, attend and answer: exploring question-guided spatial attention
+</a> for visual question answering by Xu and Saenko</li>
+</ul>
+</td><td class="content"><p>Nick Jiang
+(<a href="/public/outline/Attention%20Based%20VQA%20Method.pdf">slides</a>)</p>
+</td></tr><tr><th class="nowrap">Wed, April 4</th><td class="content"><p>Neural module networks (presenter&#39;s choice)</p>
+<ul>
+<li><a href="https://arxiv.org/pdf/1511.02799v3.pdf">Neural Module Networks</a>
+by Andreas et al., 2016</li>
+<li><a href="https://arxiv.org/pdf/1704.05526.pdf">Learning to Reason: End-to-End Neural Module Networks
+</a> by Hu et al., 2017</li>
+</ul>
+</td><td class="content"><p>Berthy Feng
+(<a href="/public/outline/Neural%20Module%20Networks.pdf">slides</a>)</p>
+</td></tr><tr><td class="content" colspan="3"><p>Other cool papers we may not have a chance to cover</p>
+<ul>
+<li><a href="https://arxiv.org/pdf/1603.06180.pdf">Segmentation from natural language expressions</a></li>
+<li><a href="http://tamaraberg.com/visualmadlibs/">Visual Madlibs</a></li>
+<li><a href="https://arxiv.org/pdf/1705.03865.pdf">Nice summary paper of existing VQA techniques</a></li>
+<li><a href="http://papers.nips.cc/paper/6202-hierarchical-question-image-co-attention-for-visual-question-answering">Hierarchical Question-Image Co-Attention for Visual Question Answering
+</a></li>
+<li><a href="http://openaccess.thecvf.com/content_iccv_2017/html/Kafle_An_Analysis_of_ICCV_2017_paper.html">An Analysis of Visual Question Answering
+</a>
+from ICCV&#39;17</li>
+<li>VQA on abstract images:
+<a href="https://vision.ece.vt.edu/clipart/">Bringing Semantics into Focus Using Visual Abstractions</a>
+(project page with pretty pictures, code and papers)</li>
+<li><a href="https://arxiv.org/abs/1511.03416">Visual 7W: Grounded Question Answering in Images</a></li>
+</ul>
+</td></tr><tr><td class="content has-text-centered title is-4" colspan="3"><p>Module 3: Video understanding</p>
+</td></tr><tr><th class="nowrap">Mon, April 9</th><td class="content"><p>Classic video datasets and algorithms</p>
+<ul>
+<li><a href="https://hal.inria.fr/inria-00583818/file/wang_cvpr11.pdf">Action Recognition by Dense Trajectories
+</a>
+by Wang, Klaser, Schmid, Cheng-Lin CVPR&#39;11</li>
+<li>Four key datasets:
+<a href="http://www.nada.kth.se/cvap/actions/">KTH</a>,
+<a href="http://crcv.ucf.edu/data/UCF101.php">UCF-101</a>,
+<a href="http://www.di.ens.fr/~laptev/actions/hollywood2/">Hollywood2</a>,
+<a href="http://serre-lab.clps.brown.edu/wp-content/uploads/2012/08/Kuehne_etal_ICCV2011.pdf">HMDB-51</a></li>
+</ul>
+<p>Background: </p>
+<ul>
+<li>Review optical flow, e.g., from the COS 429 lecture or from this nice tutorial </li>
+<li>HOG lecture: <a href="http://www.cs.princeton.edu/courses/archive/fall17/cos429/notes/cos429_fall2017_lecture4_interest_points.pdf">http://www.cs.princeton.edu/courses/archive/fall17/cos429/notes/cos429_fall2017_lecture4_interest_points.pdf</a></li>
+</ul>
+<p>Followup: </p>
+<ul>
+<li>Action Recognition with Improved Trajectories by Wang and Schmid ICCV&#39;13</li>
+<li>Local handcrafted features are convolutional neural networks by Lan et al. ICLR&#39;16</li>
+</ul>
+</td><td class="content"><p>Divya Thuremella + Qasim Nadeem
+(<a href="/public/outline/Classic%20Video%20Datasets%20and%20Algorithms.pdf">slides</a>)</p>
+</td></tr><tr><th class="nowrap">Wed, April 11</th><td class="content"><p>Two classic deep learning frameworks for action classification </p>
+<ul>
+<li><a href="https://arxiv.org/abs/1406.2199">Two-stream convolutional networks for action recognition in videos
+</a> by Simonyan and Zisserman NIPS&#39;14</li>
+<li><a href="https://cs.stanford.edu/people/karpathy/deepvideo/">Large-scale Video Classification with Convolutional Neural Networks
+</a> by Karpathy et al. CVPR&#39;14</li>
+</ul>
+</td><td class="content"><p>Haochen Li
+(<a href="/public/outline/Action%20Recognition%20in%20Video.pdf">slides</a>)</p>
+</td></tr><tr><td class="content" colspan="3"><p>April 11th in class: title, selection of options 1-3, (optional) partner name due</p>
+<p>April 12th 12:30-1:30pm: Saurabh Gupta (Berkeley) colloquium on Vision+Robotics </p>
+<p>April 13th: project milestone due</p>
+</td></tr><tr><th class="nowrap">Mon, April 16</th><td class="content"><p>From classification to temporal localization with 3D convolutions</p>
+<ul>
+<li><a href="https://arxiv.org/abs/1412.0767">Learning spatiotemporal features with 3d convolutional networks
+</a> by Tran, Bourdev, Fergus, Torresani, Paluri ICCV&#39;15</li>
+<li><a href="http://activity-net.org/about.html">ActivityNet: A Large-scale video benchmark for human activity understanding
+</a> by Heilbron et al. CVPR&#39;15</li>
+<li><a href="https://arxiv.org/pdf/1608.08128.pdf">Temporal Activity Detection in Untrimmed Videos with Recurrent Neural Networks
+</a> by Montes et al. ActivityNet challenge 2016</li>
+</ul>
+</td><td class="content"><p>Austin Le
+(<a href="/public/outline/From%20Classification%20to%20Temporal%20Localization%20with%203D%20Convolution.pdf">slides</a>)</p>
+</td></tr><tr><th class="nowrap">Wed, April 18</th><td class="content"><p>Two simple (relatively speaking) models for temporal action localization</p>
+<ul>
+<li><a href="http://ai.stanford.edu/~syyeung/everymoment.html">Every moment counts: dense detailed labeling of actions in complex videos
+</a> by Yeung et al. IJCV&#39;17</li>
+<li><a href="https://arxiv.org/pdf/1704.03615.pdf">Predictive-Corrective Networks for Action Detection
+</a> by Dave et al. CVPR&#39;17</li>
+</ul>
+</td><td class="content"><p>Jiaqi Su
+(<a href="/public/outline/Two%20simple%20Models%20for%20Temporal%20Action.pdf">slides</a>)</p>
+</td></tr><tr><td class="content" colspan="3"><p>April 20th: feedback on milestones due</p>
+</td></tr><tr><th class="nowrap">Mon, April 23</th><td class="content"><p>Action recognition in the spirit of object detection</p>
+<ul>
+<li><a href="https://arxiv.org/abs/1703.07814">R-C3D regional convolutional 3D network for temporal activity detection
+</a> Xu, Das, Saenko </li>
+<li><a href="https://arxiv.org/pdf/1801.09184.pdf">Contextual Multi-scale Region Convolutional 3D network for activity detection
+</a> by Bai, Xu, Saenko, and Ghanem</li>
+</ul>
+</td><td class="content"><p>Nicholas Turner + Sven Dorkenwald
+(<a href="/public/outline/Action%20recognition%20in%20the%20spirit%20of%20object%20detection.pdf">slides</a>)</p>
+</td></tr><tr><th class="nowrap">Wed, April 25</th><td class="content"><p>Favorite video understanding paper. The presenters should take the lead on finalizing the topic.
+They can poll/discuss with others on Piazza, or just propose a topic themselves.
+Please do confirm with me before finalizing.</p>
+<p>Suggestions: very recent work on a new architecture for action recognition</p>
+<ul>
+<li><a href="https://arxiv.org/pdf/1705.07750.pdf">Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset Carreira and Zisserman
+</a></li>
+<li><a href="https://arxiv.org/pdf/1711.07971.pdf">Non-local neural networks
+</a> by Wang, Girshick, Gupta, He</li>
+</ul>
+<p>Or work on VQA or captioning in videos, some sample papers below</p>
+</td><td class="content"><p>Julie LaChance + Vikash
+(<a href="/public/outline/Computer%20Vision%20Seminar%20Pres.pdf">slides</a>)</p>
+</td></tr><tr><td class="content" colspan="3"><p>Other cool video papers</p>
+<ul>
+<li><a href="http://ai.stanford.edu/~syyeung/resources/YeuRusMorLiCvpr16.pdf">End-to-end learning of action detection from frame glimpses in videos
+</a> by Yeung et al. CVPR&#39;16</li>
+<li><a href="https://arxiv.org/pdf/1604.01753.pdf">Hollywood in Homes: Crowdsourcing Data Collection for Activity Understanding
+</a> by Sigurdsson et al. ECCV&#39;16</li>
+<li><a href="https://arxiv.org/pdf/1608.00859.pdf">Temporal Segment Networks: Towards Good Practices for Deep Action Recognition
+</a> by Wang et al. winner of ActivityNet challenge 2016, ECCV&#39;16</li>
+<li><a href="https://arxiv.org/pdf/1604.04494.pdf">Long-term temporal convolutions for action recognition
+</a> by Varol, Laptev, Schmid </li>
+<li><a href="https://arxiv.org/abs/1612.06371">Asynchronous temporal fields for action recognition
+</a> by Sigurdsson et al. CVPR&#39;17</li>
+<li><a href="https://arxiv.org/abs/1708.02696">What actions are needed for understanding human actions in videos?
+</a> ICCV&#39;17</li>
+<li><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Donahue_Long-Term_Recurrent_Convolutional_2015_CVPR_paper.pdf">Long-term recurrent convolutional networks for visual recognition and description
+</a>
+by Donahue et al. CVPR&#39;15</li>
+<li><a href="https://cs.stanford.edu/people/ranjaykrishna/densevid/">Dense captioning events in videos
+</a> by Krishna et al. ICCV&#39;17</li>
+<li><a href="https://arxiv.org/abs/1512.02902">Movie QA: Understanding stories in movies through question-answering
+</a> by Tapaswi et al. CVPR&#39;16</li>
+</ul>
+</td></tr><tr><td class="nowrap">Mon, April 30</td><td>Project Spotlights</td><td></td></tr><tr><td class="nowrap">Wed, May 2</td><td>Project Spotlights</td><td></td></tr><tr><td class="content" colspan="3"><p>Friday, May 11th: project report due</p>
+<p>Tuesday, May 15th: report feedback due</p>
+</td></tr></table></div></section><script type="text/javascript" src="main.bundle.js"></script></body>
